@@ -1,0 +1,128 @@
+{% extends "layout.html" %}
+
+
+{% block body %}
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      
+        <button class="btn btn-default" name="lanzadera" type="submit" data-bs-toggle="modal" data-bs-target="#lanzadera">
+          <img src="https://c7.alamy.com/compes/2hf1m3x/ilustracion-del-transbordador-espacial-de-dibujos-animados-y-del-vector-de-refuerzo-aislada-sobre-fondo-blanco-2hf1m3x.jpg" width="200" /> 
+        </button>
+      
+    </div>
+
+
+    <div class="col">
+      <!-- <form action="/agregar/2", method="POST"> -->
+        <button class="btn btn-default" name="tripulada" type="submit" data-bs-toggle="modal" data-bs-target="#tripulada">
+        <img src="https://static.vecteezy.com/system/resources/previews/005/709/172/large_2x/astronaut-and-rocket-spaceship-landed-on-planet-vector.jpg" width="280" /> 
+       </button>
+      <!-- </form> -->
+    </div>
+
+    <div class="col-1">
+      <!-- <form action="/agregar/3", method="POST"> -->
+       <button class="btn btn-default" name="notripulada" type="submit">
+        <img src="https://img.freepik.com/free-vector/isolated-satellite-white_1308-49801.jpg?w=740&t=st=1659248046~exp=1659248646~hmac=7da43c84e3df3e7b20107339dea57d5c4a9484077012378e501ffd703247e897" width="180" /> 
+       </button>
+      <!-- </form> -->
+    </div>
+
+  </div>
+</div>
+
+<div class="modal fade" id="lanzadera" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Nave lanzadera</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        
+      <form action="/agregar", method="POST">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Nombre</label>
+          <input type="text" name="nombre" class="form-control" >
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">situacion</label>
+          <input type="text" name="situacion" class="form-control" >
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Peso</label>
+            <input type="text" name="peso" class="form-control" >
+        </div>
+    
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Empuje</label>
+            <input type="text" name="empuje" class="form-control" >
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Combustible</label>
+            <input type="text" name="combustible" class="form-control" >
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Objetivo</label>
+          <input type="text" name="objetivo" class="form-control" >
+        </div>
+  
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Pais</label>
+          <input type="text" name="pais" class="form-control" >
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Fases</label>
+          <input type="text" name="fases" class="form-control" >
+        </div>
+
+      
+
+        <select name="select" class="d-none">
+          
+              <option value="lanzadera"> 
+              </option>
+        
+        </select>
+
+ 
+          <button type="submit" class="btn btn-primary">Save changes</button>
+      </form>    
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="modal fade" id="tripulada" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Modal body text goes here.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+ 
+
+
+
+ {% endblock %}

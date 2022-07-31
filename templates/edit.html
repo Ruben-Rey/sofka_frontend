@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<div class="col-md-4 offset-md-4">
+    <div class="card card-body">
+        
+        <form action="/actualizar/{{ nave['id'] }}", method="POST">
+            <div class="form-group">
+                <label for="exampleFormControlInput1" class="form-label">Nombre</label>
+                <input type="text" name="nombre" class="form-control" value="{{ nave['nombre'] }}"> 
+            </div>
+
+            <div class="form-group">
+                <label for="exampleFormControlInput1" class="form-label">Situacion</label>
+                <input type="text" name="situacion" class="form-control" value="{{ nave['situacion'] }}">   
+            </div>
+
+            <div class="form-group">
+                <label for="exampleFormControlInput1" class="form-label">Peso</label>
+                <input type="text" name="peso" class="form-control" value="{{ nave['peso'] }}">                     
+            </div>
+
+            <div class="form-group">
+                <label for="exampleFormControlInput1" class="form-label">Empuje</label>
+                <input type="text" name="empuje" class="form-control" value="{{ nave['empuje'] }}">   
+            </div>
+
+            <div class="form-group">
+                <label for="exampleFormControlInput1" class="form-label">Combustile</label>
+                <input type="text" name="combustible" class="form-control" value="{{ nave['combustible'] }}">                     
+            </div>
+
+
+            <div class="form-group">
+                <label for="exampleFormControlInput1" class="form-label">objetivo</label>
+                <input type="text" name="objetivo" class="form-control" value="{{ nave['objetivo'] }}">   
+            </div>
+
+            <div class="form-group">
+                <label for="exampleFormControlInput1" class="form-label">Pais</label>
+                <input type="text" name="pais" class="form-control" value="{{ nave['pais'] }}">                     
+            </div>
+
+            <div class="form-group">
+                <label for="exampleFormControlInput1" class="form-label">Fases</label>
+                <input type="text" name="fases" class="form-control" value="{{ nave['fases'] }}">                     
+            </div>
+
+            <div class="form-group">
+
+                <button type="submit" class="btn btn-success btn-block">Save</button>                     
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+
+
+{% endblock %}
